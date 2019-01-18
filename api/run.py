@@ -37,7 +37,8 @@ def create_folder(id):
     os.system('sudo mkdir '+id)
     return id + "---> folder created"
 
-# not tested
+# using variables to get value
+# http://127.0.0.1:5000/makeDirectoryByQuery/?query=abcd
 @app.route("/makeDirectoryByQuery/",methods =["GET"])
 def create_folder_using_query():
     username = request.args.get('query')

@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body {
+    height: 100vh;
+}
+
+input{
+    display: block;
+    padding: 10px;
+    border:none;  
+    width: 290px;
+    background-color: white;
+    border-bottom: solid black 1px;
+}
+input:focus{
+    outline: none;
+}
+#background-container{
+    background-image:url('../img/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+#container{
+    display: flex;              /* setting diplay = fix to centre the inner div */
+    justify-content: center;
+    align-items: center;       
+    height: 100vh;
+
+}
+
+#form-div{
+    position: relative;
+    margin: 0 auto;                 /*form div which contains input elements of login form*/
+    width: 320px;
+    border-radius:10px;
+    border: none;
+    background-color: white;
+    height: 50vh;
+    opacity: 1;
+    /* display: table;
+    margin: 0 auto; */
+}
+
+
+#login-button{
+    border: none;
+    background-color:#09263a;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 20px;
+    width: 100px;
+    font-weight: bold;
+    margin: 0 auto;
+    border-radius: 2px;
+    
+}
+#login-button:hover{
+    cursor: pointer;
+}
+h2{
+    color: #09263a;
+    text-align: center;
+}
+.form-element-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-element{
+    padding: 10px;
+    width: 300px;
+
+}
+
+.fp{
+    float: right;           /*class given to forgot password*/
+    color: #09263a;
+    font-weight: bold;
+}
+
+.parent-container{
+    position: relative;
+    display: flex;  
+    flex-direction: column;    /*outermost container*/
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.sidebar-container{
+    margin-left: -200px;
+    width: 200px;
+    padding-bottom: 10px;
+    background-color: #f1f1f1;
+    border: solid green 4px;
+}
+
+.sidebar-container a{
+    height: 45px;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;              /*tabs in the sidebar*/
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidebar-container a:hover{
+    background-color: #555;     
+    color: white;
+}
+
+.container-navbar{
+    display: flex;
+    height: 45px;
+    width: 100vw;            
+    z-index: 1;
+    background-color: #333;
+
+}
+.container-navbar  a {
+    color: #f2f2f2;                     /*tabs in the navbar */
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+.container-navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.middle-container{
+    display: flex;
+    width: 100vw;
+}
+
+.container-footer{
+    bottom: 0;
+    background-color: #333;      /*       footer of the whole page */
+    width: 100vw;
+    z-index: 0;
+    padding: 5px;
+    color: #f2f2f2;
+    position: fixed;
+}
+
+.content{
+
+    padding: 10px;
+    /* border: solid black 1px; */          /*middle div containing the table*/   
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    display: flex;
+    
+}
+
+.table-div{
+
+    max-height: 85vh;
+    width: 70%;
+    /* justify-content: center;
+    align-items: center;*/
+    height: 100vh;
+    overflow: auto;
+    /* border: solid black 3px; */
+}
+
+table{
+    position: relative;
+    margin: 0 auto;
+    height: auto;
+    width: 60%;
+}
+th, td {
+    padding: 5px;
+}
+#userData th {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    
+}
+
+table, th, td {
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#userData tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#userData tr:hover {background-color: #ddd;}
+
+tr{
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+
+}
+.saveButton{
+    padding: 10px;
+}
+
+button {
+    padding: 5px;
+    
+}
+a{
+    text-decoration: none;
+}
+
+.edit-table{
+    padding-left: 10px;
+    width: 30%;
+    position: relative;
+    /* border: solid green 3px; */
+}
+.edit-table input{
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    #form-div,input,.form-element {             /*media query to adjust width of login form acc
+                                                    accordong to screen width*/
+        width: 90%;
+    }
+    .parent-container{
+        flex-direction: column;
+    }
+    .sidebar-container{
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+    .middle-container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .container-navbar{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+
+  }
+  .edit-table{
+      width: 100%;
+  }
+  .content{
+
+    flex-direction: column;
+    margin-left:auto;
+    margin-right: auto;
+    overflow:unset;
+      
+  }
+  .container-navbar a,.sidebar-container a{
+    height: 100%;
+}
+
+.table-div{
+    margin-top: 20px;
+    width: 100%;
+    overflow: unset;
+}
+}
+

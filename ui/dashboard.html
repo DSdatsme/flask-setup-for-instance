@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/Login_Dashboard.css') }}"/>
+    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container-navbar">
+            <a class="active" id="menuButton" href="#home">Menu</a>
+        </div>
+        <div class="middle-container">
+            <div class="sidebar-container">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
+                <a href="login.html">Logout</a>
+            </div>
+            <div class="content">
+                <div class="edit-table">
+                    <div class="form-control">
+                        <input id="txtEmail" type="email" placeholder="Email">
+                    </div>
+                    <div class="form-control">
+                        <input id="txtUsername" type="text" placeholder="Username">
+                    </div><br>
+                    <button class="saveButton" id="btnSave">Save</button>
+                </div>
+
+                <div class="table-div">
+                    <table id="userTable">
+                            <tbody id="userData">
+                                <tr>
+                                <th>Username</th> 
+                                <th>Email-id</th>
+                                <th>Action</th>
+                                </tr>
+                            </tbody>
+                     </table> 
+                 </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="container-footer">
+            Copyright @ 2018 All Rights Reserved. | Aditya Kuchekar
+    </footer>
+<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+</body>
+</html>

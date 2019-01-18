@@ -12,6 +12,6 @@ pip install flask_cors
 > flask run
 
 #### To kill flask server on a port
+
 sudo apt-get install psmisc
-``` run sudo fuser -k 5000/tcp
-```
+run sudo fuser -k 5000/tcp

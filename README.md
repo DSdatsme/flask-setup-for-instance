@@ -1,11 +1,11 @@
 ### steps to setup
 
 #### we will be using python3
-sudo apt-get update
-sudo apt-get install git -y
-sudo apt-get install python-pip -y
-sudo pip install Flask
-export FLASK_APP=run.py
+sudo apt-get update <br>
+sudo apt-get install git -y <br>
+sudo apt-get install python-pip -y <br>
+sudo pip install Flask <br>
+export FLASK_APP=run.py <br>
 pip install flask_cors
 
 #### to run use following command
@@ -14,6 +14,5 @@ pip install flask_cors
 
 #### To kill flask server on a port
 
-> sudo apt-get install psmisc
-
-> run sudo fuser -k 5000/tcp
+> sudo apt-get install psmisc<br>
+run sudo fuser -k 5000/tcp

@@ -4,12 +4,13 @@ Repo contains a sample code to be used to create a webservice and which in turn 
 ### steps to setup
 
 #### we will be using python3
-sudo apt-get update <br>
+```sudo apt-get update <br>
 sudo apt-get install git -y <br>
 sudo apt-get install python-pip -y <br>
 sudo pip install Flask <br>
 export FLASK_APP=run.py <br>
 pip install flask_cors
+```
 
 #### to run use following command
 > flask run
